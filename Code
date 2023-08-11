@@ -1,0 +1,57 @@
+Exercise 1 - Strings
+Given the code below, insert the correct negative index on line 3 in order to get the last character in the string.
+my_string = "In 2010, someone paid 10k Bitcoin for two pizzas."
+print(my_string[-1])
+-----------------------------------------------------------------------------------------------------------------------
+Exercise 2 - Strings
+Given the code below, insert the correct positive index on line 3 in order to return the comma character from the string.
+my_string = "In 2010, someone paid 10k Bitcoin for two pizzas."
+print(my_string[7])
+-----------------------------------------------------------------------------------------------------------------------
+Exercise 3 - Strings
+Given the code below, insert the correct negative index on line 3 in order to return the w character from the string.
+my_string = "In 2010, someone paid 10k Bitcoin for two pizzas."
+print(my_string[39])
+-----------------------------------------------------------------------------------------------------------------------
+Exercise 4 - Strings
+Given the code below, insert the correct method on line 3 in order to return the index of the B character in the string.
+my_string = "In 2010, someone paid 10k Bitcoin for two pizzas."
+
+for i in range(len(my_string)):
+    if my_string[i] == "B":
+        print(i);
+[OR]
+print(my_string.index("B"))
+-----------------------------------------------------------------------------------------------------------------------
+Exercise 57 - Lists
+Given the code below, use the correct code on line 3 in order to return my_list except the first 3 elements, using a single, negative index.
+my_list = [10, 10.5, 20, 30, 'Python', 'Java', 'Ruby']
+
+my_slice = my_list[-4:]
+
+print(my_slice) #[30, 'Python', 'Java', 'Ruby']
+--------------------------------------------------------------
+Exercise 58 - Lists
+Given the code below, use the correct code on line 3 in order to return my_list except the last 2 elements, using a single, positive index.
+my_list = [10, 10.5, 20, 30, 'Python', 'Java', 'Ruby']
+
+my_slice = my_list[:5]
+
+print(my_slice) #[10, 10.5, 20, 30, 'Python']
+--------------------------------------------------------------
+Exercise 59 - Lists
+Given the code below, use the correct code on line 3 in order to return every third element of my_list starting with the first element of the list.
+my_list = [10, 10.5, 20, 30, 'Python', 'Java', 'Ruby']
+
+my_slice = my_list[::3];
+
+print(my_slice) #[10, 30, 'Ruby']
+--------------------------------------------------------------
+Exercise 60 - Lists
+Given the code below, use the correct code on line 3 in order to return every fourth element of my_list starting with the last element of the list.
+my_list = [10, 10.5, 20, 30, 'Python', 'Java', 'Ruby']
+
+my_slice = my_list[::-4]
+
+print(my_slice) #['Ruby', 20]
+--------------------------------------------------------------

@@ -16,7 +16,6 @@ print(my_string[39])
 Exercise 4 - Strings
 Given the code below, insert the correct method on line 3 in order to return the index of the B character in the string.
 my_string = "In 2010, someone paid 10k Bitcoin for two pizzas."
-
 for i in range(len(my_string)):
     if my_string[i] == "B":
         print(i);
@@ -26,32 +25,110 @@ print(my_string.index("B"))
 Exercise 57 - Lists
 Given the code below, use the correct code on line 3 in order to return my_list except the first 3 elements, using a single, negative index.
 my_list = [10, 10.5, 20, 30, 'Python', 'Java', 'Ruby']
-
 my_slice = my_list[-4:]
-
 print(my_slice) #[30, 'Python', 'Java', 'Ruby']
 --------------------------------------------------------------
 Exercise 58 - Lists
 Given the code below, use the correct code on line 3 in order to return my_list except the last 2 elements, using a single, positive index.
 my_list = [10, 10.5, 20, 30, 'Python', 'Java', 'Ruby']
-
 my_slice = my_list[:5]
-
 print(my_slice) #[10, 10.5, 20, 30, 'Python']
 --------------------------------------------------------------
 Exercise 59 - Lists
 Given the code below, use the correct code on line 3 in order to return every third element of my_list starting with the first element of the list.
 my_list = [10, 10.5, 20, 30, 'Python', 'Java', 'Ruby']
-
 my_slice = my_list[::3];
-
 print(my_slice) #[10, 30, 'Ruby']
 --------------------------------------------------------------
 Exercise 60 - Lists
 Given the code below, use the correct code on line 3 in order to return every fourth element of my_list starting with the last element of the list.
 my_list = [10, 10.5, 20, 30, 'Python', 'Java', 'Ruby']
-
 my_slice = my_list[::-4]
-
 print(my_slice) #['Ruby', 20]
 --------------------------------------------------------------
+Exercise 5 - Strings
+Given the code below, insert the correct method on line 3 in order to return the number of occurrences of the letter o in the string.
+my_string = "In 2010, someone paid 10k Bitcoin for two pizzas."
+print(my_string.count('o'));
+--------------------------------------------------------------
+Exercise 6 - Strings
+Given the code below, insert the correct method on line 3 in order to convert all letters in the string to uppercase.
+my_string = "In 2010, someone paid 10k Bitcoin for two pizzas."
+print(my_string.upper());
+--------------------------------------------------------------
+Exercise 7 - Strings
+Given the code below, insert the correct method on line 3 in order to get the index at which the substring Bitcoin starts.
+my_string = "In 2010, someone paid 10k Bitcoin for two pizzas."
+print(my_string.find("Bitcoin"));
+--------------------------------------------------------------
+Exercise 8 - Strings
+Given the code below, insert the correct method on line 3 in order to check of the string starts with the letter X.
+my_string = "In 2010, someone paid 10k Bitcoin for two pizzas."
+print(my_string.startswith('x'));
+--------------------------------------------------------------
+Exercise 9 - Strings
+Given the code below, insert the correct method on line 3 in order to convert all uppercase letters to lowercase and all lowercase letters to uppercase.
+my_string = "In 2010, someone paid 10k Bitcoin for two pizzas."
+print(my_string.swapcase());
+--------------------------------------------------------------
+Exercise 10 - Strings
+Given the code below, insert the correct method on line 3 in order to remove all spaces (single Space characters from the keyboard) from the string.
+my_string = "In 2010, someone paid 10k Bitcoin for two pizzas."
+print(my_string.replace(' ',''))
+--------------------------------------------------------------
+Exercise 11 - Strings
+Given the code below, insert the correct method on line 3 in order to replace all the occurrences of letter i with the substring btc.
+my_string = "In 2010, someone paid 10k Bitcoin for two pizzas."
+print(my_string.replace('i','btc'));
+--------------------------------------------------------------
+Exercise 12 - Strings
+Given the code below, insert the correct method on line 3 in order to split the entire string in two parts, using the comma as a delimiter.
+my_string = "In 2010, someone paid 10k Bitcoin for two pizzas."
+print(my_string.split(','))
+--------------------------------------------------------------
+Exercise 13 - Strings
+Given the code below, insert the correct method on line 3 in order to join the characters of the string using the & symbol as a delimiter.
+my_string = "In 2010, someone paid 10k Bitcoin for two pizzas."
+print("&".join(my_string));
+--------------------------------------------------------------
+Exercise 14 - Strings
+Given the code below, insert the correct code on line 4 in order to concatenate my_string with the following string:
+my_string = "In 2010, someone paid 10k Bitcoin for two pizzas."
+my_other_string = "Poor guy!"
+print(my_string+my_other_string);
+--------------------------------------------------------------
+Exercise 15 - Strings
+Given the code below, insert the correct method on line 3 in order to convert the first letter of each word in the string to uppercase.
+my_string = "In 2010, someone paid 10k Bitcoin for two pizzas."
+print(my_string.title());
+--------------------------------------------------------------
+Regular Expressions
+
+Exercise 201 - Regular Expressions
+Write code on line 5 in order to match the word Bitcoin at the beginning of the string using the match() method.
+
+import re
+s = "Bitcoin was born on Jan 3rd 2009 as an alternative to the failure of the current financial system. In 2017, the price of 1 BTC reached $20000, with a market cap of over $300B."
+result = re.match('Bitcoin',s)
+print(result.group());
+--------------------------------------------------------------
+Exercise 202 - Regular Expressions
+Write code on line 5 in order to match the word Bitcoin at the beginning of the string using the match() method and ignoring the case. This way, no matter if you have bitcoin or Bitcoin, the match is done either way.
+
+import re
+s = "Bitcoin  was born on Jan 3rd 2009 as an alternative to the failure of the current financial system. In 2017, the price of 1 BTC reached $20000, with a market cap of over $300B."
+result = re.match('Bitcoin',s,re.IGNORECASE);#re.I or re.IGNORECASE
+print(result.group())
+--------------------------------------------------------------
+Exercise 230 - Regular Expressions
+Write code on line 5 in order to replace all the words starting with an uppercase letter or digits greater than or equal to 6 in the string with W using the sub() method.
+import re;
+
+s = "Bitcoin was born on Jan 3rd 2009 as an alternative to the failure of the current financial system. In 2017, the price of 1 BTC reached $20000, with a market cap of over $300B. Bitcoin, Market Cap: $184,073,529,068, Price: $10,259.02, Volume 24h: $15,670,986,269, Circulating Supply: 17,942,600 BTC, Change 24h: 0.10%"
+result=re.sub("[A-Z]\w{1,}|[6-9]","W",s);
+print(result);
+# The \w metacharacter matches word characters. A word character is a character a-z, A-Z, 0-9, including _ (underscore).
+# {1,} Previous pattern must have atleast 1 character
+--------------------------------------------------------------
+
+

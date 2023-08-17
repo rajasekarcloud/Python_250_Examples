@@ -130,5 +130,41 @@ print(result);
 # The \w metacharacter matches word characters. A word character is a character a-z, A-Z, 0-9, including _ (underscore).
 # {1,} Previous pattern must have atleast 1 character
 --------------------------------------------------------------
+Exercise 180 - Functions
+Implement a function called my_func() that takes a single parameter x (a dictionary) and multiplies the number of elements in the dictionary with the largest key in the dictionary, also returning the result when the function is called.
+
+def my_func(x):
+    max_key = max(x.keys());
+    return len(x) * max_key;
+
+result = my_func({1: 3, 2: 3, 4: 5, 5: 9, 6: 8, 3: 7, 7: 0})
+print(result);
+--------------------------------------------------------------
+Exercise 181 - Functions
+Implement a function called my_func() that takes a single positional parameter x and a default parameter y which is equal to 10 and multiplies the two, also returning the result when the function is called.
+
+def my_func(x,y=10):
+    return x*y;
+result = my_func(5)
+print(result);
+--------------------------------------------------------------
+Exercise 182 - Functions
+Implement a function called my_func() that takes a single positional parameter x and two default parameters y and z which are equal to 100 and 200 respectively, and adds them together, also returning the result when the function is called.
+
+def my_func(x,y=100,z=200):
+    return x+y+z;
+
+result = my_func(50)
+print(result)
+--------------------------------------------------------------
+Exercise 183 - Functions
+Implement a function called my_func() that takes two default parameters x (a list) and y (an integer), and returns the element in x positioned at index y, also printing the result to the screen when called.
+
+def my_func(x,y):
+    return x[y];
+
+result = my_func(list(range(2,25,2)), 4)
+print(result) #result should be 10
+--------------------------------------------------------------
 
 

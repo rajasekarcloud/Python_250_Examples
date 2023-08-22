@@ -286,5 +286,473 @@ except ZeroDivisionError:
 finally:
     print("Finish!");
 --------------------------------------------------------------
+Exercise 136 - Loops
+Write a for loop that iterates over the x list and prints out all the elements of the list.
 
+x = [10, 12, 13, 14, 17, 19, 21, 22, 25]
 
+for i in x:
+    print(i);
+--------------------------------------------------------------
+Exercise 137 - Loops
+Write a for loop that iterates over the x list and prints out the remainders of each element of the list divided by 3.
+
+x = [10, 12, 13, 14, 17, 19, 21, 22, 25]
+
+for i in x:
+    print(i%3);
+--------------------------------------------------------------
+Exercise 138 - Loops
+Write a for loop that iterates over the x list and prints out all the elements of the list in reversed order and multiplied by 10.
+
+x = [10, 12, 13, 14, 17, 19, 21, 22, 25]
+for i in range(len(x)-1,-1,-1):
+    print(x[i] * 10);
+
+OR 
+
+x = [10, 12, 13, 14, 17, 19, 21, 22, 25]
+ 
+for i in sorted(x, reverse = True):
+	print(i * 10)
+--------------------------------------------------------------
+Exercise 139 - Loops
+Write a for loop that iterates over the x list and prints out all the elements of the list divided by 2 and the string Great job! after the list is exhausted.
+
+x = [10, 12, 13, 14, 17, 19, 21, 22, 25]
+for i in x:
+    print(i/2);
+print("Great job!");
+--------------------------------------------------------------
+Exercise 140 - Loops
+Write a for loop that iterates over the x list and prints out the index of each element.
+
+x = [10, 12, 13, 14, 17, 19, 21, 22, 25]
+
+for i in x:
+    print(x.index(i));
+--------------------------------------------------------------
+Exercise 141 - Loops
+Write a while loop that prints out the value of x squared while x is less than or equal to 5. Be careful not to end up with an infinite loop!
+
+x = 0
+
+while x<=5:
+    print(x*x);
+    x+=1;
+--------------------------------------------------------------
+Exercise 142 - Loops
+Write a while loop that prints out the value of x times 10 while x is less than or equal to 4 and then prints out Done! when x becomes larger than 4. Be careful not to end up with an infinite loop!
+
+x = 0
+
+while x<=4:
+    print(x*10);
+    x+=1;
+else:
+    print("Done!");
+--------------------------------------------------------------
+Exercise 143 - Loops
+Write a while loop that prints out the value of x plus 10 while x is less than or equal to 15 and the remainder of x divided by 5 is 0. Be careful not to end up with an infinite loop!
+
+x = 10
+
+while x<=15 and x%5 == 0:
+    print(x+10);
+    x+=1;
+--------------------------------------------------------------
+Exercise 144 - Loops
+Write a while loop that prints out the absolute value of x while x is negative. Be careful not to end up with an infinite loop!
+
+x = -7
+
+while x<0:
+    print(abs(x));
+    x +=1;
+--------------------------------------------------------------
+Exercise 145 - Loops
+Write a while loop that prints out the value of x times y while x is greater than or equal to 5 and less than 10, and prints out the result of x divided by y when x becomes 10. Be careful not to end up with an infinite loop!
+
+x = 5
+y = 2
+while x >=5 and x<10:
+    print(x*y);
+    x+=1;
+else:
+    print(x/y);
+--------------------------------------------------------------
+Exercise 146 - Loops
+Write code that will iterate over the x list and multiply by 10 only the elements that are greater than 20 and print them out to the screen.
+
+x = [10, 12, 13, 14, 17, 19, 21, 22, 25]
+
+for i in x:
+    if i > 20:
+        print(i*10);
+--------------------------------------------------------------
+Exercise 147 - Loops
+Write code that will iterate over the x and y lists and multiply each element of x with each element of y, also printing the results to the screen.
+
+x = [2, 4, 6]
+y = [5, 10]
+
+for i in x:
+    for j in y:
+        print(i*j);
+--------------------------------------------------------------
+Exercise 148 - Loops
+Write code that will iterate over the x and y lists and multiply each element of x with each element of y that is less than 12, also printing the results to the screen.
+
+x = [2, 4, 6, 8]
+y = [5, 10, 15, 20]
+for i in x:
+    for j in y:
+         if j < 12:
+             print(i*j);
+--------------------------------------------------------------
+Exercise 149 - Loops
+Write code that will iterate over the x and y lists and multiply each element of x that is greater than 5 with each element of y that is less than 12, also printing the results to the screen.
+
+x = [2, 4, 6, 8]
+y = [5, 10, 15, 20]
+for i in x:
+    for j in y:
+        if i > 5 and j < 12:
+            print(i*j);
+--------------------------------------------------------------
+Exercise 150 - Loops
+Write code that will iterate over the x and y lists and multiply each element of x with each element of y that is less than or equal to 10, also printing the results to the screen. For y's elements that are greater than 10, multiply each element of x with y squared.
+
+x = [2, 4, 6, 8]
+y = [5, 10, 15, 20]
+
+for i in x:
+    for j in y:
+        if j <= 10:
+            print(i * j)
+        else:
+            print(i * j ** 2)
+--------------------------------------------------------------
+Exercise 151 - Loops
+Write code that will print out each character in x doubled if that character is also inside y.
+
+x = "cryptocurrency"
+y = "blockchain"
+for i in x:
+    if i in y:
+        print(i+i);
+--------------------------------------------------------------
+Exercise 152 - Loops
+Write code that will iterate over the range generated by range(9) and for each element that is between 3 and 7 inclusively print out the result of multiplying that element by the second element in the same range.
+
+my_range = range(9)
+
+for i in my_range:
+    if i >= 3 and i <= 7:
+        print(i * my_range[1]);
+--------------------------------------------------------------
+Exercise 153 - Loops
+Write code that will iterate over the range starting at 1, up to but not including 11, with a step of 2, and for each element that is between 3 and 8 inclusively print out the result of multiplying that element by the last element in the same range. For any other element of the range (outside [3-8]) print Outside!
+for i in range(1,11,2):
+    if 3 <= i <= 8:
+        print(i * range(1,11,2)[-1])
+    else:
+        print("Outside!")
+--------------------------------------------------------------
+Exercise 15 - Strings
+Given the code below, insert the correct method on line 3 in order to convert the first letter of each word in the string to uppercase.
+my_string = "In 2010, someone paid 10k Bitcoin for two pizzas."
+print(my_string.title());
+--------------------------------------------------------------
+Exercise 16 - Strings
+Given the code below, use string formatting with the % operator on line 3 to map the values of 2010, 10k and Bitcoin to the corresponding formatting operators.
+my_string = "In %s, someone paid %s %s for two pizzas."
+print(my_string % ("2010", "10k", "Bitcoin"));
+--------------------------------------------------------------
+Exercise 17 - Strings
+Given the code below, use string formatting with the format() method on line 3 to map the values of 2010, 10k and Bitcoin to the corresponding formatting operators.
+my_string = "In {}, someone paid {} {} for two pizzas."
+print(my_string.format("2010", "10k", "Bitcoin"))
+--------------------------------------------------------------
+Exercise 25 - Strings
+Given the code below, use slicing and insert the correct code on line 3 in order to return the string except the last 4 characters. Use a single, negative index!
+my_string = "In 2010, someone paid 10k Bitcoin for two pizzas."
+print(my_string[:-4]);
+--------------------------------------------------------------
+Exercise 24 - Strings
+Given the code below, use slicing and insert the correct code on line 3 in order to return the string except the first 10 characters. Use a single, positive index!
+my_string = "In 2010, someone paid 10k Bitcoin for two pizzas."
+print(my_string[10:]);
+--------------------------------------------------------------
+Exercise 23 - Strings
+Given the code below, use slicing and insert the correct code on line 3 in order to return every 7th character of the string, starting with the first character.
+The final result should be I,n top
+my_string = "In 2010, someone paid 10k Bitcoin for two pizzas."
+print(my_string[::7]);
+--------------------------------------------------------------
+Exercise 18 - Strings
+Given the code below, use slicing and insert the correct code on line 3 in order to return the substring 2010 from the string. Use positive indexes!
+my_string = "In 2010, someone paid 10k Bitcoin for two pizzas."
+print(my_string[3:7]);
+--------------------------------------------------------------
+Exercise 19 - Strings
+Given the code below, use slicing and insert the correct code on line 3 in order to return the substring Bitcoin from the string. Use negative indexes!
+my_string = "In 2010, someone paid 10k Bitcoin for two pizzas."
+print(my_string[-23:-16])
+--------------------------------------------------------------
+Exercise 20 - Strings
+Given the code below, use slicing and insert the correct code on line 3 in order to return the first 12 characters in the string. Use a single, positive index!
+my_string = "In 2010, someone paid 10k Bitcoin for two pizzas."
+print(my_string[:12]);
+--------------------------------------------------------------
+Exercise 21 - Strings
+Given the code below, use slicing and insert the correct code on line 3 in order to return the last 9 characters of the string. Use a single, negative index!
+my_string = "In 2010, someone paid 10k Bitcoin for two pizzas."
+print(my_string[-9:]);
+--------------------------------------------------------------
+Exercise 22 - Strings
+Given the code below, use slicing and insert the correct code on line 3 in order to return the entire string in reversed order.
+my_string = "In 2010, someone paid 10k Bitcoin for two pizzas."
+print(my_string[-1::-1]);
+--------------------------------------------------------------
+Exercise 26 - Numbers & Booleans
+Given the code below, use the correct function on line 3 in order to convert num1 from integer to float.
+num1 = 25
+num2 = float(num1);
+print(type(num2))
+--------------------------------------------------------------
+Exercise 27 - Numbers & Booleans
+Given the code below, use the correct function on line 3 in order to convert num1 from float to integer.
+num1 = 13.67
+num2 = int(num1);
+print(type(num2))
+--------------------------------------------------------------
+Exercise 28 - Numbers & Booleans
+Given the code below, use the correct math operator in between num1 and num2 on line 4 in order to obtain the result shown.
+num1 = 25
+num2 = 8
+num3 = num1%num2
+print(num3 == 1) #result is True
+--------------------------------------------------------------
+Exercise 36 - Lists
+Given the code below, use the correct method on line 3 in order to find out the number of elements in my_list.
+my_list = [10, 10.5, 20, 30, 'Python', 'Java', 'Ruby']
+char = len(my_list);
+print(char)
+--------------------------------------------------------------
+Exercise 37 - Lists
+Given the code below, use the correct code on line 3 in order to remove the element of my_list located at index 5.
+my_list = [10, 10.5, 20, 30, 'Python', 'Java', 'Ruby']
+my_list.pop(5);
+print(my_list)
+--------------------------------------------------------------
+Exercise 38 - Lists
+Given the code below, use the correct method on line 3 in order to add the element 'C++' at the end of my_list.
+my_list = [10, 10.5, 20, 30, 'Python', 'Java', 'Ruby'];
+my_list.append('C++');
+print(my_list)
+--------------------------------------------------------------
+Exercise 39 - Lists
+Given the code below, use the correct method on line 3 in order to remove the element 30 from my_list.
+my_list = [10, 10.5, 20, 30, 'Python', 'Java', 'Ruby']
+my_list.pop(3); # my_list.remove(30)
+print(my_list)
+--------------------------------------------------------------
+Exercise 40 - Lists
+Given the code below, use the correct method on line 3 in order to return the index of the element 10.5 in my_list.
+my_list = [10, 10.5, 20, 30, 'Python', 'Java', 'Ruby']
+index = my_list.index(10.5);
+print(index)
+--------------------------------------------------------------
+Exercise 41 - Lists
+Given the code below, use the correct method on line 3 in order to insert the element 77 at index 4 in my_list.
+my_list = [10, 10.5, 20, 30, 'Python', 'Java', 'Ruby']
+my_list.insert(4,77);
+print(my_list)
+--------------------------------------------------------------
+Exercise 42 - Lists
+Given the code below, use the correct method on line 3 in order to concatenate my_list with [100, 101, 102], by adding the latter at the end of my_list.
+my_list = [10, 10.5, 20, 30, 'Python', 'Java', 'Ruby']
+my_list.extend([100,101,102]);
+print(my_list)
+--------------------------------------------------------------
+Exercise 43 - Lists
+Given the code below, use the correct method on line 3 in order to find out how many times does the element 20 occur in my_list.
+my_list = [10, 10.5, 20, 30, 'Python', 'Java', 'Ruby']
+howmany = my_list.count(20);
+print(howmany)
+--------------------------------------------------------------
+Exercise 44 - Lists
+Given the code below, use the correct function on line 3 in order to sort the elements of my_list in ascending order.
+my_list = [10, 10.5, 20, 30, 25.6, 19.25, 11.01, 29.99]
+asc=sorted(my_list);
+print(asc);
+--------------------------------------------------------------
+Exercise 45 - Lists
+Given the code below, use the correct function (and argument) on line 3 in order to sort the elements of my_list in descending order.
+my_list = [10, 10.5, 20, 30, 25.6, 19.25, 11.01, 29.99]
+asc = sorted(my_list,reverse=True);
+print(asc)
+--------------------------------------------------------------
+Exercise 46 - Lists
+Given the code below, use the correct function on line 3 in order to find out the smallest number in my_list.
+my_list = [10, 10.5, 20, 30, 25.6, 19.25, 11.01, 29.99]
+small = min(my_list);
+print(small)
+--------------------------------------------------------------
+Exercise 47 - Lists
+Given the code below, use the correct function on line 3 in order to find out the largest number in my_list.
+my_list = [10, 10.5, 20, 30, 25.6, 19.25, 11.01, 29.99]
+large = max(my_list);
+print(large)
+--------------------------------------------------------------
+Exercise 48 - Lists
+Given the code below, use the correct function on line 3 in order to get the sum of all the elements of my_list.
+my_list = [10, 10.5, 20, 30, 25.6, 19.25, 11.01, 29.99]
+add = sum(my_list);
+print(add)
+--------------------------------------------------------------
+Exercise 49 - Lists
+Given the code below, use the correct method on line 3 in order to delete all the elements from my_list and obtain an empty list.
+my_list = [10, 10.5, 20, 30, 25.6, 19.25, 11.01, 29.99]
+my_list.clear();
+print(my_list)
+--------------------------------------------------------------
+Exercise 50 - Lists
+Given the code below, use the correct operators and parentheses on line 3 in order to add the elements of [30.01, 30.02, 30.03] to my_list and multiply the resulting list by 2.
+my_list = [10, 10.5, 20, 30, 25.6, 19.25, 11.01, 29.99]
+add = (my_list + [30.01, 30.02, 30.03])*2;
+print(add)
+--------------------------------------------------------------
+Exercise 51 - Lists
+Given the code below, use the correct code on line 3 in order to return the element 20 from my_list based on its index.
+my_list = [10, 10.5, 20, 30, 'Python', 'Java', 'Ruby']
+element = my_list[2];
+print(element)
+--------------------------------------------------------------
+Exercise 52 - Lists
+Given the code below, use the correct code on line 3 in order to return the element Java from my_list based on its index (negative).
+my_list = [10, 10.5, 20, 30, 'Python', 'Java', 'Ruby']
+element = my_list[-2];
+print(element)
+--------------------------------------------------------------
+Exercise 53 - Lists
+Given the code below, use the correct code on line 3 in order to return a slice made of [30, 'Python', 'Java'] from my_list based on positive indexes.
+my_list = [10, 10.5, 20, 30, 'Python', 'Java', 'Ruby']
+my_slice = my_list[3:6]
+print(my_slice)
+--------------------------------------------------------------
+Exercise 54 - Lists
+Given the code below, use the correct code on line 3 in order to return a slice made of [30, 'Python', 'Java'] from my_list based on negative indexes.
+my_list = [10, 10.5, 20, 30, 'Python', 'Java', 'Ruby']
+my_slice = my_list[-4:-1]
+print(my_slice)
+--------------------------------------------------------------
+Exercise 55 - Lists
+Given the code below, use the correct code on line 3 in order to return my_list except the first 3 elements, using a single, positive index.
+my_list = [10, 10.5, 20, 30, 'Python', 'Java', 'Ruby']
+my_slice = my_list[3:]
+print(my_slice) #[30, 'Python', 'Java', 'Ruby']
+--------------------------------------------------------------
+Exercise 56 - Lists
+Given the code below, use the correct code on line 3 in order to return my_list except the last 4 elements, using a single, negative index.
+my_list = [10, 10.5, 20, 30, 'Python', 'Java', 'Ruby']
+my_slice = my_list[:-4];
+print(my_slice) #[10, 10.5, 20]
+--------------------------------------------------------------
+Exercise 86 - Dictionaries
+Given the code below, use the correct code on line 3 in order to return the value associated with key 4. Do not use a method as a solution for this exercise!
+crypto = {1: "Bitcoin", 2: "Ethereum", 3: "Litecoin", 4: "Stellar", 5: "XRP"}
+value = crypto[4];
+print(value
+--------------------------------------------------------------
+Exercise 87 - Dictionaries
+Given the code below, use the correct code on line 3 in order to return the value associated with key 4. This time, use a method as a solution for this exercise!
+crypto = {1: "Bitcoin", 2: "Ethereum", 3: "Litecoin", 4: "Stellar", 5: "XRP"}
+value = crypto.get(4);
+print(value)
+--------------------------------------------------------------
+Exercise 88 - Dictionaries
+Given the code below, use the correct code on line 3 in order to update the value associated with key 4 to "Cardano".
+crypto = {1: "Bitcoin", 2: "Ethereum", 3: "Litecoin", 4: "Stellar", 5: "XRP"}
+crypto[4] = 'Cardano';
+print(crypto[4])
+--------------------------------------------------------------
+Exercise 89 - Dictionaries
+Given the code below, use the correct code on line 3 in order to add a new key-value pair to the dictionary: 6: "Monero"
+crypto = {1: "Bitcoin", 2: "Ethereum", 3: "Litecoin", 4: "Stellar", 5: "XRP"}
+crypto[6] = "Monero";
+print(crypto[6]);
+--------------------------------------------------------------
+Exercise 90 - Dictionaries
+Given the code below, use the correct code on line 3 in order to return the number of key-value pairs in the dictionary.
+crypto = {1: "Bitcoin", 2: "Ethereum", 3: "Litecoin", 4: "Stellar", 5: "XRP"}
+number = len(crypto);
+print(number)
+--------------------------------------------------------------
+Exercise 91 - Dictionaries
+Given the code below, use the correct code on line 3 in order to delete the key-value pair associated with key 3. Do not use a method as a solution for this exercise!
+crypto = {1: "Bitcoin", 2: "Ethereum", 3: "Litecoin", 4: "Stellar", 5: "XRP"}
+crypto.pop(3); # del crypto[3]
+print(crypto)
+--------------------------------------------------------------
+Exercise 92 - Dictionaries
+Given the code below, use the correct code on line 3 in order to delete the key-value pair associated with key 3. This time, use a method as a solution for this exercise!
+crypto = {1: "Bitcoin", 2: "Ethereum", 3: "Litecoin", 4: "Stellar", 5: "XRP"}
+crypto.pop(3)
+print(crypto)
+--------------------------------------------------------------
+Exercise 93 - Dictionaries
+Given the code below, use the correct code on line 3 in order to verify that 7 is not a key in the dictionary.
+crypto = {1: "Bitcoin", 2: "Ethereum", 3: "Litecoin", 4: "Stellar", 5: "XRP"}
+check = 7 not in crypto;
+print(check)
+--------------------------------------------------------------
+Exercise 94 - Dictionaries
+Given the code below, use the correct method on line 3 in order to delete all the elements in the dictionary.
+crypto = {1: "Bitcoin", 2: "Ethereum", 3: "Litecoin", 4: "Stellar", 5: "XRP"}
+crypto.clear();
+print(crypto)
+--------------------------------------------------------------
+Exercise 95 - Dictionaries
+Given the code below, use the correct code on line 3 in order to get a list of tuples, where each tuple represents a key-value pair in the dictionary.
+crypto = {1: "Bitcoin", 2: "Ethereum", 3: "Litecoin", 4: "Stellar", 5: "XRP"}
+result = crypto.items();
+print(list(result))
+--------------------------------------------------------------
+Exercise 96 - Dictionaries
+Given the code below, use the correct function on line 3 in order to get the sum of all the keys in the dictionary.
+crypto = {1: "Bitcoin", 2: "Ethereum", 3: "Litecoin", 4: "Stellar", 5: "XRP"}
+add = sum(crypto.keys());
+print(add)
+--------------------------------------------------------------
+Exercise 97 - Dictionaries
+Given the code below, use the correct method on line 3 in order to get a list of all the values in the dictionary.
+crypto = {1: "Bitcoin", 2: "Ethereum", 3: "Litecoin", 4: "Stellar", 5: "XRP"}
+val = crypto.values();
+print(list(val))
+--------------------------------------------------------------
+Exercise 98 - Dictionaries
+Given the code below, use the correct function on line 3 in order to get the smallest key in the dictionary.
+crypto = {1: "Bitcoin", 2: "Ethereum", 3: "Litecoin", 4: "Stellar", 5: "XRP"}
+key = min(crypto.keys());
+print(key)
+--------------------------------------------------------------
+Exercise 99 - Dictionaries
+Given the code below, use the correct method on line 3 in order to get a list of all the keys in the dictionary.
+crypto = {1: "Bitcoin", 2: "Ethereum", 3: "Litecoin", 4: "Stellar", 5: "XRP"}
+keys = crypto.keys();
+print(list(keys))
+--------------------------------------------------------------
+Exercise 100 - Dictionaries
+Given the code below, use the correct method on line 3 in order to return and remove an arbitrary key-value pair from the dictionary.
+crypto = {1: "Bitcoin", 2: "Ethereum", 3: "Litecoin", 4: "Stellar", 5: "XRP"}
+crypto.popitem() 
+print(len(crypto))
+--------------------------------------------------------------
+Exercise 61 - Sets
+Given the code below, use the correct function on line 3 in order to convert my_list to a set.
+my_list = [1, 2, 3, 4, 4, 5, 2, 9, 8, 8, 4, 3]
+my_set = set(my_list);
+print(type(my_set))
+--------------------------------------------------------------

@@ -756,3 +756,438 @@ my_list = [1, 2, 3, 4, 4, 5, 2, 9, 8, 8, 4, 3]
 my_set = set(my_list);
 print(type(my_set))
 --------------------------------------------------------------
+Exercise 101 - Data Type Conversions
+Given the code below, use the correct function on line 3 in order to convert value to a string.
+value = 10
+conv = str(value);
+print(type(conv))
+--------------------------------------------------------------
+Exercise 102 - Data Type Conversions
+Given the code below, use the correct function on line 3 in order to convert value to an integer.
+value = "10"
+conv = int(value);
+print(type(conv))
+--------------------------------------------------------------
+Exercise 104 - Data Type Conversions
+Given the code below, use the correct function on line 3 in order to convert value to a list.
+value = "Hello!"
+conv = list(value);
+print(type(conv))
+--------------------------------------------------------------
+Exercise 106 - Data Type Conversions
+Given the code below, use the correct function on line 3 in order to convert value to a frozen set.
+value = (10, 20, 40, 10, 25, 30, 45)
+conv = frozenset(value);
+print(type(conv))
+--------------------------------------------------------------
+Exercise 110 - Data Type Conversions
+Given the code below, use the correct function on line 3 in order to convert value from hexadecimal to decimal notation.
+value = '0xa'
+conv = int(value, 16)
+print(conv)
+--------------------------------------------------------------
+Exercise 109 - Data Type Conversions
+Given the code below, use the correct function on line 3 in order to convert value from binary to decimal notation.
+value = '0b1010'
+conv = int(value, 2)
+print(conv)
+--------------------------------------------------------------
+Exercise 108 - Data Type Conversions
+Given the code below, use the correct function on line 3 in order to convert value to a hexadecimal representation.
+value = 10
+conv = hex(10)
+print(conv)
+--------------------------------------------------------------
+Exercise 107 - Data Type Conversions
+Given the code below, use the correct function on line 3 in order to convert value to a binary representation.
+value = 10
+conv = bin(value)
+print(conv)
+--------------------------------------------------------------
+Exercise 111 - Conditionals
+Considering the code below, write code that prints out True! if x has 50 characters or more.
+x = "The days of Python 2 are almost over. Python 3 is the king now."
+if len(x) >= 50:
+    print("True!");
+--------------------------------------------------------------
+Exercise 112 - Conditionals
+Considering the code below, write code that prints out True! if x is a string and the first character in the string is T.
+x = "The days of Python 2 are almost over. Python 3 is the king now."
+if isinstance(x,str) and x[0] == "T":
+    print("True!");
+--------------------------------------------------------------
+Exercise 113 - Conditionals
+Considering the code below, write code that prints out True! if at least one of the following conditions occurs:
+the string contains the character z
+the string contains the character y at least twice
+x = "The days of Python 2 are almost over. Python 3 is the king now."
+if "z" in x or x.count('y') > 2:
+    print("True!")
+--------------------------------------------------------------
+Exercise 114 - Conditionals
+Considering the code below, write code that prints out True! if the index of the first occurrence of letter f is less than 10 and prints out False! if the same condition is not satisfied.
+x = "The days of Python 2 are almost over. Python 3 is the king now."
+if x.index("f") < 10:
+    print("True!")
+else:
+    print("False!")
+--------------------------------------------------------------
+Exercise 115 - Conditionals
+Considering the code below, write code that prints out True! if the last 3 characters of the string are all digits and prints out False! otherwise
+x = "The days of Python 2 are almost over. Python 3 is the king now."
+if x[-3].isdigit():
+    print("True!");
+else:
+    print("False!");
+--------------------------------------------------------------
+Exercise 116 - Conditionals
+Considering the code below, write code that prints out True! if x has at least 8 elements and the element positioned at index 6 is a floating-point number and prints out False! otherwise.
+x = [115, 115.9, 116.01, ["length", "width", "height"], 109, 115, 119.5, ["length", "width", "height"]]
+if len(x) >=8 and isinstance(x[6],float):
+    print("True!");
+else:
+    print("False!");
+--------------------------------------------------------------
+Exercise 117 - Conditionals
+Considering the code below, write code that prints out True! if the second string of the first list in x ends with the letter h and the first string of the second list in x also ends with the letter h, and prints out False! otherwise.
+x = [115, 115.9, 116.01, ["length", "width", "height"], 109, 115, 119.5, ["length", "width", "height"]]
+if x[3][1].endswith("h") and x[7][0].endswith("h"):
+    print("True!")
+else:
+    print("False!")
+--------------------------------------------------------------
+Exercise 118 - Conditionals
+Considering the code below, write code that prints out True! if one of the following two conditions are satisfied and prints out False! otherwise.
+the third string of the first list in x ends with the letter h
+the second string of the second list in x also ends with the letter h
+x = [115, 115.9, 116.01, ["length", "width", "height"], 109, 115, 119.5, ["length", "width", "height"]]
+if x[3][2].endswith("h") or x[7][1].endswith("h"):
+    print("True!")
+else:
+    print("False!")
+--------------------------------------------------------------
+Exercise 119 - Conditionals
+Considering the code below, write code that prints out True! if the largest value among the first 3 elements of the list is less than or equal to the smallest value among the next 3 elements of the list. Otherwise, print out False!
+x = [115, 115.9, 116.01, 109, 115, 119.5, ["length", "width", "height"]]
+if max(x[:3]) <= min(x[3:6]):
+    print("True!")
+else:
+    print("False!")
+--------------------------------------------------------------
+Exercise 135 - Conditionals
+Considering the code below, write code that prints out True! if the number of characters of the smallest value in the dictionary is equal to the number of occurrences of letter a in the value at key 3, and prints out False! otherwise.
+x = {1: "Python", 2: "Java", 3: "Javascript", 4: "Ruby", 5: "Perl", 6: "C#", 7: "C++"}
+print(min(x.values()));
+print(len(min(x.values())));
+print(x.get(3).count('a'));
+if len(min(x.values())) == x.get(3).count('a'):
+    print("True!");
+else:
+    print("False!");
+--------------------------------------------------------------
+Exercise 134 - Conditionals
+Considering the code below, write code that prints out True! if the second to last character of the value at key 3 is the first character of the value at key 5, and prints out False! otherwise.
+x = {1: "Python", 2: "Java", 3: "Javascript", 4: "Ruby", 5: "Perl", 6: "C#", 7: "C++"}
+if x.get(3)[2:-1] == x.get(5)[1]:
+    print("True!");
+else:
+    print("False!");
+--------------------------------------------------------------
+Exercise 133 - Conditionals
+Considering the code below, write code that prints out True! if the 2nd character of the value at key 1 is also present in the value at key 4, and prints out False! otherwise.
+x = {1: "Python", 2: "Java", 3: "Javascript", 4: "Ruby", 5: "Perl", 6: "C#", 7: "C++"}
+if x[1][1] in x[4]:
+    print("True!")
+else:
+    print("False!")
+--------------------------------------------------------------
+Exercise 132 - Conditionals
+Considering the code below, write code that prints out True! if the sum of the last 3 elements of the first range plus the sum of the last 3 elements of the 3rd range is equal to the sum of the last 3 elements of the 2nd range, and prints out False! if the length of the first range times 2 is less than the sum of all the elements of the 3rd range.
+x = [list(range(5)), list(range(5,9)), list(range(1,10,3))]
+if sum(x[0][-3:]) + sum(x[2][-3:]) == sum(x[1][-3:]):
+    print("True!")
+elif len(x[0]) * 2 < sum(x[2]):
+    print("False!")
+--------------------------------------------------------------
+Exercise 191 - Files
+Add the necessary code in between print's parentheses in order to read the content of test.txt as a string and have the result printed out to the screen.
+f = open("test.txt", "r")
+print(f.read())
+
+f = open("test.txt", "r")
+print(f.readlines())
+
+f = open("test.txt", "r")
+f.read()
+f.seek(0)
+print(f.read())
+
+f = open("test.txt", "r")
+f.read(5)
+print(f.tell())
+
+f = open("test.txt", "r")
+f.read(5)
+print(f.mode)
+
+f = open("test.txt", "a+")
+print(f.mode)
+
+f = open("test.txt", "w")
+f.write("python")
+f.close()
+f = open("test.txt", "r")
+print(f.read())
+--------------------------------------------------------------
+Exercise 62 - Sets
+Given the code below, use the correct function on line 3 in order to convert my_list to a frozen set.
+my_list = [1, 2, 3, 4, 4, 5, 2, 9, 8, 8, 4, 3]
+my_set = frozenset(my_list);
+print(type(my_set))
+--------------------------------------------------------------
+Exercise 63 - Sets
+Given the code below, use the correct code on line 3 in order to verify if element 10 is in my_set.
+my_set = {1, 4, 6, 5, 9, 0, 8, 3, 2, 7, 11}
+check =  10 in my_set;
+print(check)
+--------------------------------------------------------------
+Exercise 64 - Sets
+Given the code below, use the correct method on line 3 in order to add the element 19 to my_set.
+my_set = {1, 4, 6, 5, 9, 0, 8, 3, 2, 7, 11}
+my_set.add(19)
+print(my_set)
+--------------------------------------------------------------
+Exercise 65 - Sets
+Given the code below, use the correct method on line 3 in order to delete the element 9 from my_set.
+my_set = {1, 4, 6, 5, 9, 0, 8, 3, 2, 7, 11}
+my_set.remove(9)
+print(my_set)
+--------------------------------------------------------------
+Exercise 66 - Sets
+Given the code below, use the correct method on line 4 in order to find out the common elements of my_set1 and my_set2.
+my_set1 = {1, 4, 6, 5, 9, 0, 8, 3, 2, 7, 11}
+my_set2 = {12, 9, 4, 2, 0, 6}
+common = my_set1.intersection(my_set2)
+print(sorted(list(common)))
+--------------------------------------------------------------
+Exercise 67 - Sets
+Given the code below, use the correct method on line 4 in order to join the elements of my_set1 and my_set2.
+my_set1 = {1, 4, 6, 5, 9, 0, 8, 3, 2, 7, 11}
+my_set2 = {12, 9, 4, 2, 0, 6}
+join = my_set1.union(my_set2);
+print(sorted(list(join)))
+--------------------------------------------------------------
+Exercise 68 - Sets
+Given the code below, use the correct method on line 4 in order to find out the elements of my_set2 that are not members of my_set1.
+my_set1 = {1, 4, 6, 5, 9, 0, 8, 3, 2, 7, 11}
+my_set2 = {12, 9, 4, 2, 0, 6}
+diff = my_set2.difference(my_set1)
+print(sorted(list(diff)))
+--------------------------------------------------------------
+Exercise 71 - Tuples
+Given the code below, write code in order to perform tuple assignment on line 3 and obtain the results below.
+my_tup = ("Romania", "Poland", "Estonia")
+(ro, po, es) = my_tup
+print(my_tup);
+print(ro + ", " + po + ", " + es)  # returns 'Romania, Poland, Estonia'
+--------------------------------------------------------------
+Exercise 72 - Tuples
+Given the code below, use the correct method on line 3 in order to find out the last element of my_tup in alphabetical order.
+my_tup = ("Romania", "Poland", "Estonia", "Bulgaria", "Slovakia", "Slovenia", "Hungary")
+last = sorted(my_tup)[-1];
+print(last) #should return Slovenia
+--------------------------------------------------------------
+Exercise 73 - Tuples
+Given the code below, use the correct method on line 3 in order to find out the number of occurrences of Estonia in my_tup.
+my_tup = ("Romania", "Poland", "Estonia", "Bulgaria", "Slovakia", "Slovenia", "Estonia", "Romania", "Hungary", "Slovenia")
+number = my_tup.count("Estonia");
+print(number)
+--------------------------------------------------------------
+f = open("test.txt", "w")
+f.writelines(['python', ' ', 'and', ' ', 'java'])
+f.close() 
+f = open("test.txt", "r")
+print(f.read())
+--------------------------------------------------------------
+Exercise 222 - Regular Expressions
+Write code on line 5 in order to match all the words starting with an uppercase letter in the string using the findall() method.
+import re
+s = "Bitcoin was born on Jan 3rd 2009 as an alternative to the failure of the current financial system. In 2017, the price of 1 BTC reached $20000, with a market cap of over $300B."
+result = re.findall(r"([A-Z]{1}.+?)\s", s)
+print(result)
+--------------------------------------------------------------
+Exercise 221 - Regular Expressions
+Write code on line 5 in order to match all the three-letter words in the string using the findall() method.
+import re
+s = "Bitcoin was born on Jan 3rd 2009 as an alternative to the failure of the current financial system. In 2017, the price of 1 BTC reached $20000, with a market cap of over $300B."
+result = re.findall(r"\s(\w{3})\s", s) 
+print(result)
+--------------------------------------------------------------
+Exercise 204 - Regular Expressions
+Write code on line 5 in order to match the year 2009 in the string using the search() method. Use the \d in your solution.
+import re
+s = "Bitcoin was born on Jan 3rd 2009 as an alternative to the failure of the current financial system. In 2017, the price of 1 BTC reached $20000, with a market cap of over $300B."
+result = re.search(r"(\d{4})\s", s)
+print(result.group(1))
+--------------------------------------------------------------
+Exercise 205 - Regular Expressions
+Write code on line 5 in order to match the year 2017 in the string using the search() method. Use the \d in your solution.
+import re
+s = "Bitcoin was born on Jan 3rd 2009 as an alternative to the failure of the current financial system. In 2017, the price of 1 BTC reached $20000, with a market cap of over $300B."
+result = re.search(r"(\d{4}),", s)
+print(result.group(1))
+--------------------------------------------------------------
+Exercise 206 - Regular Expressions
+Write code on line 5 in order to match the date Jan 3rd 2009 in the string using the search() method. Use the \d in your solution.
+import re
+s = "Bitcoin was born on Jan 3rd 2009 as an alternative to the failure of the current financial system. In 2017, the price of 1 BTC reached $20000, with a market cap of over $300B."
+result = re.search(r"(.{3}\s\d\w\w\s\d{4})\s", s)
+print(result.group(1))
+--------------------------------------------------------------
+Exercise 207 - Regular Expressions
+Write code on line 5 in order to match BTC in the string using the search() method.
+import re
+s = "Bitcoin was born on Jan 3rd 2009 as an alternative to the failure of the current financial system. In 2017, the price of 1 BTC reached $20000, with a market cap of over $300B."
+result = re.search(r"([A-Z]{3})", s)
+print(result.group(1))
+--------------------------------------------------------------
+Exercise 208 - Regular Expressions
+Write code on line 5 in order to match 1 BTC in the string using the search() method.
+import re
+s = "Bitcoin was born on Jan 3rd 2009 as an alternative to the failure of the current financial system. In 2017, the price of 1 BTC reached $20000, with a market cap of over $300B."
+result = re.search(r"([0-9]\s[A-Z]{3})", s)
+print(result.group(1))
+--------------------------------------------------------------
+Exercise 209 - Regular Expressions
+Write code on line 5 in order to match $20000 in the string using the search() method.
+import re
+s = "Bitcoin was born on Jan 3rd 2009 as an alternative to the failure of the current financial system. In 2017, the price of 1 BTC reached $20000, with a market cap of over $300B."
+result = re.search(r"(\$\d{5}),", s)
+print(result.group(1))
+--------------------------------------------------------------
+Exercise 210 - Regular Expressions
+Write code on line 5 in order to match $300B in the string using the search() method.
+import re
+s = "Bitcoin was born on Jan 3rd 2009 as an alternative to the failure of the current financial system. In 2017, the price of 1 BTC reached $20000, with a market cap of over $300B."
+result = re.search(r"(\$\d{3}[A-Z])\.", s)
+print(result.group(1))
+--------------------------------------------------------------
+Exercise 220 - Regular Expressions
+Write code on line 5 in order to match all the numbers (3, 2009, 2017 etc.) in the string using the findall() method.
+import re
+s = "Bitcoin was born on Jan 3rd 2009 as an alternative to the failure of the current financial system. In 2017, the price of 1 BTC reached $20000, with a market cap of over $300B."
+result = re.findall(r"\d{1,}", s)
+print(result)
+--------------------------------------------------------------
+Exercise 219 - Regular Expressions
+Write code on line 5 in order to match all the years in the string using the findall() method.
+import re
+s = "Bitcoin was born on Jan 3rd 2009 as an alternative to the failure of the current financial system. In 2017, the price of 1 BTC reached $20000, with a market cap of over $300B."
+result = re.findall(r"\s(\d{4})", s)
+print(result)
+--------------------------------------------------------------
+Exercise 218 - Regular Expressions
+Write code on line 5 in order to match 259.02, V in the string using the search() method.
+import re
+s = "Bitcoin, Market Cap: $184,073,529,068, Price: $10,259.02, Volume 24h: $15,670,986,269, Circulating Supply: 17,942,600 BTC, Change 24h: 0.10%"
+result = re.search(r",([0-9]{3}\.[0-9]{2},\s.)", s)
+print(result.group(1))
+--------------------------------------------------------------
+Exercise 217 - Regular Expressions
+Write code on line 5 in order to match Circulating Supply: 17,942,600 BTC in the string using the search() method.
+import re
+s = "Bitcoin, Market Cap: $184,073,529,068, Price: $10,259.02, Volume 24h: $15,670,986,269, Circulating Supply: 17,942,600 BTC, Change 24h: 0.10%"
+result = re.search(r"(\w+ \w+: \d{2}.+? [A-Z]{3}), ", s)
+print(result.group(1))
+--------------------------------------------------------------
+Exercise 216 - Regular Expressions
+Write code on line 5 in order to match Volume 24h: $15,670,986,269 in the string using the search() method.
+import re
+s = "Bitcoin, Market Cap: $184,073,529,068, Price: $10,259.02, Volume 24h: $15,670,986,269, Circulating Supply: 17,942,600 BTC, Change 24h: 0.10%"
+result = re.search(r"\.\d\d, (.{1,}:\s\$\d{2,},\d{2,},\d{2,},\d{2,}), ", s)
+print(result.group(1))
+--------------------------------------------------------------
+Exercise 215 - Regular Expressions
+Write code on line 5 in order to match 24h: 0.10% in the string using the search() method.
+import re
+s = "Bitcoin, Market Cap: $184,073,529,068, Price: $10,259.02, Volume 24h: $15,670,986,269, Circulating Supply: 17,942,600 BTC, Change 24h: 0.10%"
+result = re.search(r"\s(.{4}\s\d\.\d\d%)", s)
+print(result.group(1))
+--------------------------------------------------------------
+Exercise 214 - Regular Expressions
+Write code on line 5 in order to match 17,942,600 BTC in the string using the search() method.
+import re
+s = "Bitcoin, Market Cap: $184,073,529,068, Price: $10,259.02, Volume 24h: $15,670,986,269, Circulating Supply: 17,942,600 BTC, Change 24h: 0.10%"
+result = re.search(r"\s([0-9]{2},[0-9]{3},[0-9]{3}\s.{3}),", s)
+print(result.group(1))
+--------------------------------------------------------------
+Exercise 213 - Regular Expressions
+Write code on line 5 in order to match 10,259.02 in the string using the search() method.
+import re
+s = "Bitcoin, Market Cap: $184,073,529,068, Price: $10,259.02, Volume 24h: $15,670,986,269, Circulating Supply: 17,942,600 BTC, Change 24h: 0.10%"
+result = re.search(r"\$(\d{1,3},\d{1,3}\.\d{1,3}),", s)
+print(result.group(1))
+--------------------------------------------------------------
+Exercise 212 - Regular Expressions
+Write code on line 5 in order to match 184,073,529,068 in the string using the search() method.
+import re
+s = "Bitcoin, Market Cap: $184,073,529,068, Price: $10,259.02, Volume 24h: $15,670,986,269, Circulating Supply: 17,942,600 BTC, Change 24h: 0.10%"
+result = re.search(r"\$(\d{3},[0-9]{3},\d{3},[0-9]{3}),", s)
+print(result.group(1))
+--------------------------------------------------------------
+Exercise 211 - Regular Expressions
+Write code on line 5 in order to match market cap of in the string using the search() method.
+import re
+s = "Bitcoin was born on Jan 3rd 2009 as an alternative to the failure of the current financial system. In 2017, the price of 1 BTC reached $20000, with a market cap of over $300B."
+result = re.search(r"\s(.{6} .{3} .{2})\s", s)
+print(result.group(1))
+--------------------------------------------------------------
+Exercise 242 - Other Concepts
+Write a list comprehension on line 1 that will iterate over range(1, 15, 5) and return a list of its elements squared.
+cph = [ i**2 for i in range(1,15,5)]
+print(cph)
+--------------------------------------------------------------
+Exercise 243 - Other Concepts
+Write a list comprehension on line 1 that will iterate over range(5, 25, 3) and return a list of its elements squared only for the elements that are less than or equal to 16.
+cph = [i ** 2 for i in range(5, 25, 3) if i <= 16]
+print(cph)
+--------------------------------------------------------------
+Exercise 241 - Other Concepts
+Write a list comprehension on line 1 that will iterate over range(1, 5) and return a list of its elements.
+cph = [i for i in range(1,5)]
+print(cph)
+--------------------------------------------------------------
+Exercise 244 - Other Concepts
+Write a dictionary comprehension on line 1 that will iterate over range(9) and return a dictionary of key-value pairs where the value is equal to the key times 3.
+cph = {x: x * 3 for x in range(9)}
+print(cph)
+--------------------------------------------------------------
+Exercise 245 - Other Concepts
+Write a set comprehension on line 1 that will iterate over range(10, 19) and return a set of its elements divided by 2.5.
+cph = {x / 2.5 for x in range(10, 19)}
+print(cph)
+--------------------------------------------------------------
+Exercise 246 - Other Concepts
+Write a lambda function on line 1 that takes two parameters x and y and multiplies x with y.
+lam = lambda x, y: x * y
+print(lam(2, 5))
+--------------------------------------------------------------
+lam = lambda list1: [x * y for x in range(1, 5) for y in list1]
+--------------------------------------------------------------
+Exercise 231 - Classes
+Write a class called ClassOne starting on line 1 containing:
+The __init__ method with two parameters p1 and p2. Define the corresponding attributes inside the __init__ method.
+A method called square that takes one parameter p3 and prints out the value of p3 squared.
+class ClassOne(object):
+    def __init__(self, p1, p2):
+        self.p1 = p1
+        self.p2 = p2
+    
+    def square(self, p3):
+        print(p3 ** 2)
+ 
+p = ClassOne(1, 2)
+print(type(p))
+--------------------------------------------------------------
+
+
